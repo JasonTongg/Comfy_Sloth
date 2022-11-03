@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding-inline: 2.5rem;
+  justify-content: center;
   padding-block: 2rem;
   gap: 4rem;
+  background-color: var(--white);
+  width: 100%;
 
   img {
-    width: 85%;
+    width: 100%;
   }
 `;
 
@@ -19,7 +20,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 0.6rem;
 
   h2 {
     font-size: 3rem;

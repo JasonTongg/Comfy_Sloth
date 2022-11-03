@@ -2,10 +2,11 @@ import React from 'react';
 import {Container, Content} from './Style';
 import Foto from '../../Assets/Home.png';
 import {Link} from 'react-router-dom';
+import '../../Global.css';
 
 export default function Hero() {
   return (
-    <Container>
+    <Container className="Container">
       <Content>
         <h2>
           Design Your <br /> Comfort Zone

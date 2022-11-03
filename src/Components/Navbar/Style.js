@@ -4,9 +4,11 @@ export const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1.5rem;
-  max-width: 100%;
+  padding-block: 1.5rem;
   gap: 1rem;
+  background-color: var(--white);
+  width: 100%;
+  box-sizing: border-box;
 
   img {
     width: 175px;

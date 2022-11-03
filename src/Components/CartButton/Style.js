@@ -27,7 +27,7 @@ export const Container = styled.div`
     color: white;
     font-size: 0.8rem;
     position: absolute;
-    top: 17px;
+    top: -8px;
     right: -17px;
   }
 `;
