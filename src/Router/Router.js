@@ -8,6 +8,7 @@ import Cart from '../Pages/Cart/Cart';
 import NotFound from '../Pages/NotFound/NotFound';
 import About from '../Pages/About/About';
 import Navbar from '../Components/Navbar/Navbar';
+import Footer from '../Components/Footer/Footer';
 
 export default function Router() {
   return (
@@ -23,6 +24,7 @@ export default function Router() {
         <Route path="*" element={<Navigate to="/404" />} />
         <Route path="/404" element={<NotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
