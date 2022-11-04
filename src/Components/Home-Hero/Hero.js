@@ -17,7 +17,7 @@ export default function Hero() {
           aperiam odio ducimus, obcaecati libero et quia tempora excepturi quis
           alias?
         </p>
-        <Link>SHOP NOW</Link>
+        <Link to="/product">SHOP NOW</Link>
       </Content>
       <img src={Foto} alt="foto" />
     </Container>

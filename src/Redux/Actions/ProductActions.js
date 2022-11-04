@@ -14,3 +14,17 @@ export const getProductApi = async (dispatch) => {
   let data = await rawData.json();
   return dispatch(getProductList(data));
 };
+
+export const filterProduct = (payload) => {
+  return {
+    type: 'Filter Product',
+    payload,
+  };
+};
+
+export const sortProduct = (payload) => {
+  return {
+    type: 'Sort Product',
+    payload,
+  };
+};
