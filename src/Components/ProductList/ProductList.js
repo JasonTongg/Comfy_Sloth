@@ -2,10 +2,11 @@ import React from 'react';
 import {Item, ItemInfo, Items} from './Style';
 
 export default function ProductList({data}) {
-  console.log('render');
+  console.log(data);
   return (
     <Items>
       {data.map((item) => {
+        console.log(item);
         return (
           <Item key={item.id}>
             <img src={item.image} alt={item.name} />

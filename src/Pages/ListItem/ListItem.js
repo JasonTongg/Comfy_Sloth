@@ -75,7 +75,9 @@ export default function ListItem() {
               {categories.map((item, index) => (
                 <button
                   key={index}
-                  onClick={() => setFilter({...filter, category: item})}
+                  onClick={() => {
+                    setFilter({...filter, category: item});
+                  }}
                   className={filter.category === item ? 'active' : null}
                 >
                   {item}

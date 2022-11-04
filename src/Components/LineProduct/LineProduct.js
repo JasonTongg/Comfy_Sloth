@@ -4,7 +4,6 @@ import {Container, Item} from './Style';
 
 export default function LineProduct({data}) {
   let filterData = useSelector((state) => state.product.filteredProduct);
-  console.log(filterData);
   return (
     <Container>
       {filterData.map((item) => {

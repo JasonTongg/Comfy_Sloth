@@ -74,7 +74,7 @@ export default function ProductReducer(state = initialState, action) {
         ...state,
         productList: payload,
         featured,
-        filteredProduct: productList,
+        filteredProduct: [...productList],
       };
     case 'Filter Product':
       return {
