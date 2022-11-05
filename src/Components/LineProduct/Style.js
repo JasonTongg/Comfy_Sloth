@@ -15,6 +15,7 @@ export const Item = styled.div`
   grid-template-columns: 1fr 2fr;
   width: 100%;
   gap: 2rem;
+  position: relative;
 
   img {
     width: 100%;
@@ -27,6 +28,7 @@ export const Item = styled.div`
     h3 {
       font-size: 1.8rem;
       text-transform: capitalize;
+      cursor: pointer;
     }
 
     p:first-of-type {
@@ -45,6 +47,29 @@ export const Item = styled.div`
       padding: 0.3rem 0.5rem;
       border: none;
       border-radius: 3px;
+      cursor: pointer;
     }
+  }
+`;
+
+export const Overlay = styled.div`
+  background: rgba(0, 0, 0, 0);
+  width: calc((100% / 3) - 10px);
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s linear;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: transparent;
+  border-radius: 5px;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
   }
 `;

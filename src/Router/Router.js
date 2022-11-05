@@ -16,7 +16,7 @@ export default function Router() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Details" element={<Details />} />
+        <Route path="/Details/:id" element={<Details />} />
         <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Product" element={<List />} />
         <Route path="/Cart" element={<Cart />} />
