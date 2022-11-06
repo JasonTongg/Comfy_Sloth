@@ -7,6 +7,7 @@ export const Container = styled.div`
   width: 100%;
   padding: 4rem;
   justify-items: center;
+  background-color: var(--white);
 
   img {
     width: 541px;
@@ -17,6 +18,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 100%;
+  color: var(--black);
 
   h2 {
     font-size: 2.5rem;
@@ -26,7 +28,7 @@ export const Content = styled.div`
     font-size: 1.1rem;
     line-height: 2rem;
     width: 87%;
-    color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
   }
 `;
 

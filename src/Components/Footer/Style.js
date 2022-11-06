@@ -9,6 +9,6 @@ export const Container = styled.footer`
   letter-spacing: 2px;
 
   span {
-    color: var(--primaryColor);
+    color: #ab7a5f;
   }
 `;

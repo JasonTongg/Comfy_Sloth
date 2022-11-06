@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   padding-block: 3rem;
-  background-color: var(--secondaryColor);
+  background-color: #eaded7;
   font-size: 2rem;
   font-weight: 500;
   display: flex;
@@ -11,7 +11,7 @@ export const Container = styled.div`
   text-transform: capitalize;
 
   span {
-    color: var(--primaryColor);
+    color: #ab7a5f;
     cursor: pointer;
   }
 `;

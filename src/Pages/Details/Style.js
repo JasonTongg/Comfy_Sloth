@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
+  background-color: var(--white);
 
   button {
-    color: var(--darkWhite);
+    color: var(--white);
     background: var(--primaryColor);
     padding: 0.5rem 0.8rem;
     border: none;
@@ -20,6 +21,7 @@ export const Grid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   width: 100%;
   gap: 3.5rem;
+  color: var(--black);
 `;
 
 export const Images = styled.div`

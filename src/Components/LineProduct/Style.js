@@ -29,6 +29,7 @@ export const Item = styled.div`
       font-size: 1.8rem;
       text-transform: capitalize;
       cursor: pointer;
+      color: var(--black);
     }
 
     p:first-of-type {
@@ -38,12 +39,13 @@ export const Item = styled.div`
 
     p:last-of-type {
       margin-block: 1rem;
+      color: var(--black);
     }
 
     button {
       font-size: 0.6rem;
       background-color: var(--primaryColor);
-      color: white;
+      color: var(--white);
       padding: 0.3rem 0.5rem;
       border: none;
       border-radius: 3px;

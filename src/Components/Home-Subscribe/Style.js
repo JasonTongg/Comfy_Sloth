@@ -5,7 +5,7 @@ export const Container = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   width: 100%;
-  background-color: var(--white);
+  background-color: white;
   padding-block: 15rem;
 `;
 

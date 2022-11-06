@@ -26,19 +26,21 @@ export const Content = styled.div`
     font-size: 3rem;
     margin: 0;
     line-height: 3rem;
+    color: var(--black);
   }
 
   p {
     font-size: 1.4rem;
     line-height: 2.7rem;
-    color: rgba(0, 0, 0, 0.6);
+    opacity: 0.6;
+    color: var(--black);
   }
 
   a {
     text-decoration: none;
     padding: 0.8rem 1.7rem;
     font-size: 1.1rem;
-    color: #e3e3e3;
+    color: var(--white);
     background-color: var(--primaryColor);
     border-radius: 5px;
   }

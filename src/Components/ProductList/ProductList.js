@@ -3,7 +3,7 @@ import {Item, ItemInfo, Items, Overlay} from './Style';
 import {BiSearchAlt} from 'react-icons/bi';
 import {useNavigate} from 'react-router-dom';
 
-export default function ProductList({data}) {
+export default function ProductList({data, color}) {
   let navigate = useNavigate();
   return (
     <Items>
@@ -15,8 +15,24 @@ export default function ProductList({data}) {
               <BiSearchAlt></BiSearchAlt>
             </Overlay>
             <ItemInfo>
-              <p onClick={() => navigate(`/details/${item.id}`)}>{item.name}</p>
-              <p>${item.price / 100}</p>
+              {color ? (
+                <>
+                  <p
+                    onClick={() => navigate(`/details/${item.id}`)}
+                    style={{color: `${color}`}}
+                  >
+                    {item.name}
+                  </p>
+                  <p style={{color: `${color}`}}>${item.price / 100}</p>
+                </>
+              ) : (
+                <>
+                  <p onClick={() => navigate(`/details/${item.id}`)}>
+                    {item.name}
+                  </p>
+                  <p>${item.price / 100}</p>
+                </>
+              )}
             </ItemInfo>
           </Item>
         );

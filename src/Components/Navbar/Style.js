@@ -24,7 +24,7 @@ export const Pages = styled.div`
 
   & > * {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.7);
+    color: var(--black);
     font-size: 1.1rem;
   }
 `;

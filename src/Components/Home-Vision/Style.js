@@ -16,6 +16,7 @@ export const Content = styled.div`
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  color: var(--black);
 
   h2 {
     font-size: 2.3rem;
@@ -42,6 +43,7 @@ export const Item = styled.div`
   text-align: center;
   gap: 1rem;
   border-radius: 5px;
+  border: 2px solid #ab7a5f;
 
   h3 {
     font-size: 1.5rem;
@@ -62,6 +64,7 @@ export const Item = styled.div`
 
     & > * {
       font-size: 2.2rem;
+      color: var(--black);
     }
   }
 `;

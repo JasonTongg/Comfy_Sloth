@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
+  background-color: var(--white);
 `;
 
 export const Table = styled.div`
@@ -17,7 +18,8 @@ export const Grid = styled.div`
   width: 100%;
   padding-block: 2rem;
   font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.5);
+  opcacity: 0.5;
+  color: var(--black);
 
   & .item {
     display: flex;
@@ -35,11 +37,12 @@ export const Grid = styled.div`
     & .itemInfo {
       text-transform: capitalize;
       font-size: 1rem;
+      color: var(--black);
 
       p:first-of-type {
         font-weight: bold;
-        color: black;
       }
+
       p:last-of-type {
         display: flex;
         align-items: center;
@@ -66,8 +69,8 @@ export const Grid = styled.div`
     justify-content: center;
     gap: 1rem;
     font-weigth: bolder;
-    color: rgb(0, 0, 0, 0.8);
-
+    color: var(--black);
+    opacity: 0.8;
     svg {
       cursor: pointer;
     }
@@ -100,7 +103,8 @@ export const Grid = styled.div`
 export const Line = styled.div`
   height: 1px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--black);
+  opacity: 0.5;
 `;
 
 export const Empty = styled.div`
@@ -135,7 +139,7 @@ export const Buttons = styled.div`
   & > * {
     border: none;
     padding: 0.5rem 0.8rem;
-    color: white;
+    color: var(--white);
     font-weight: 300;
     letter-spacing: 1px;
     background-color: var(--primaryColor);
@@ -146,6 +150,7 @@ export const Buttons = styled.div`
 
   & > *:last-child {
     background-color: black;
+    color: white;
   }
 `;
 
@@ -161,6 +166,7 @@ export const TotalPrice = styled.div`
   align-self: flex-end;
   border-radius: 10px;
   height: calc(100% - 34.4px - 2rem);
+  color: var(--black);
 
   & > *:last-child {
     font-size: 1.4rem;
@@ -189,7 +195,7 @@ export const CheckoutButton = styled.button`
   align-self: flex-end;
   border: none;
   background-color: var(--primaryColor);
-  color: white;
+  color: var(--white);
   padding: 0.3rem 0.5rem;
   width: 100%;
   margin-block: 1rem;

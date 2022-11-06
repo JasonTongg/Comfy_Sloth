@@ -61,6 +61,6 @@ export const ItemInfo = styled.div`
 
   & > *:last-child {
     justify-self: flex-end;
-    color: var(--primaryColor);
+    color: #ab7a5f;
   }
 `;

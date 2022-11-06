@@ -5,6 +5,10 @@ export const Container = styled.form`
   border-radius: 10px;
   padding: 1rem 2rem;
   width: 100%;
+
+  h2 {
+    color: var(--black);
+  }
 `;
 
 export const FormItem = styled.div`
@@ -15,6 +19,7 @@ export const FormItem = styled.div`
   width: 100%;
   font-size: 1.1rem;
   font-weight: 500;
+  color: var(--black);
 
   &:last-of-type {
     margin-top: 0.8rem;
@@ -31,7 +36,8 @@ export const Section = styled.div`
 
   p {
     margin-bottom: 0.5rem;
-    color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    color: var(--black);
   }
 
   & input.name {
@@ -89,8 +95,8 @@ export const Overlay = styled.div`
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    color: black;
-    background-color: white;
+    color: var(--black);
+    background-color: var(--white);
     border-radius: 10px;
     padding: 2rem;
     gap: 1rem;
@@ -101,7 +107,7 @@ export const Overlay = styled.div`
 
     a {
       background-color: var(--primaryColor);
-      color: white;
+      color: var(--white);
       padding: 0.3rem 0.5rem;
       border: none;
       outline: none;

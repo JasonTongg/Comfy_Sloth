@@ -190,7 +190,7 @@ export default function ListItem() {
             </Sort>
           </Head>
           {display[0] ? (
-            <List data={filterData}></List>
+            <List data={filterData} color="var(--black)"></List>
           ) : (
             <LineList data={filterData}></LineList>
           )}

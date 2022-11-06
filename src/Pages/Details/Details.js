@@ -177,6 +177,6 @@ export default function Details() {
       </Container>
     );
   } else {
-    return null;
+    return <h1>Loading...</h1>;
   }
 }

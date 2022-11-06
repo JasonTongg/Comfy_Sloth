@@ -8,6 +8,7 @@ export const Container = styled.div`
   width: 100%;
   position: relative;
   align-items: flex-start;
+  background-color: var(--white);
 `;
 
 export const Filter = styled.div`
@@ -47,6 +48,7 @@ export const Components = styled.div`
   width: 100%;
   h3 {
     margin-bottom: 0.5rem;
+    color: var(--black);
   }
 `;
 
@@ -57,7 +59,8 @@ export const Categories = styled.div`
   justify-content: center;
 
   button {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--black);
+    opacity: 0.6;
     padding-block: 5px;
     cursor: pointer;
     background: transparent;
@@ -75,8 +78,9 @@ export const Categories = styled.div`
 
 export const Companies = styled.select`
   padding: 0.2rem 0.3rem;
-  border: 2px solid black;
+  border: 2px solid var(--black);
   border-radius: 5px;
+
   option {
     font-size: 1rem;
     text-transform: capitalize;
@@ -110,6 +114,7 @@ export const Colors = styled.div`
 
     &.color.active {
       opacity: 1;
+
       & > * {
         color: white;
       }
@@ -139,6 +144,7 @@ export const Head = styled.div`
   grid-template-columns: 80px 140px auto 230px;
   gap: 1rem;
   align-items: center;
+  color: var(--black);
 `;
 
 export const Grid = styled.div`
@@ -168,7 +174,13 @@ export const Sort = styled.div`
   gap: 1rem;
 
   select {
+    color: var(--black);
     padding: 0.2rem 1rem;
     border: none;
+    background-color: transparent;
+
+    option {
+      color: black;
+    }
   }
 `;
