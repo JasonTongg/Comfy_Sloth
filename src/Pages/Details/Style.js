@@ -91,7 +91,7 @@ export const Star = styled.div`
 
 export const Info = styled.div`
   display: grid;
-  grid-template-columns: 100px 150px;
+  grid-template-columns: 100px 200px;
   grid-template-rows: 40px 40px 40px;
 
   & > * {
