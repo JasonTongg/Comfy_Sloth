@@ -11,6 +11,7 @@ import {
   TotalGrid,
   Data,
   CheckoutButton,
+  Details,
 } from './Style';
 import Header from '../../Components/Header/Header';
 import {useSelector, useDispatch} from 'react-redux';
@@ -19,14 +20,17 @@ import {
   UpdateOrder,
   DeleteOrder,
   ClearOrder,
+  TotalPrice as Total_Price,
 } from '../../Redux/Actions/CartActions';
 import {useNavigate} from 'react-router-dom';
+import Checkout from '../../Components/Checkout/Checkout';
 
 export default function Cart() {
   let data = useSelector((state) => state.cart.CartProduct);
   let dispatch = useDispatch();
   let navigate = useNavigate();
   let [total, setTotal] = useState(0);
+  let [checkout, setCheckout] = useState(false);
 
   useEffect(() => {
     if (total === 0) {
@@ -38,6 +42,10 @@ export default function Cart() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    dispatch(Total_Price(total / 100 + 5.34));
+  }, [total, dispatch]);
 
   return (
     <Container>
@@ -116,24 +124,35 @@ export default function Cart() {
               Clear Shopping Cart
             </button>
           </Buttons>
-          <TotalPrice>
-            <TotalGrid>
-              <p>Subtotal :</p>
-              <p>${total / 100}</p>
-            </TotalGrid>
-            <TotalGrid>
-              <p>Shipping Fee :</p>
-              <p>$5.34</p>
-            </TotalGrid>
-            <Line></Line>
-            <TotalGrid>
-              <p>Order Total :</p>
-              <p>${total / 100 + 5.34}</p>
-            </TotalGrid>
-          </TotalPrice>
-          <CheckoutButton onClick={() => navigate('/checkout')}>
-            Check out
-          </CheckoutButton>
+          <Details>
+            <div>
+              {checkout ? (
+                <>
+                  <Checkout />
+                </>
+              ) : null}
+            </div>
+            <div>
+              <TotalPrice>
+                <TotalGrid>
+                  <p>Subtotal :</p>
+                  <p>${total / 100}</p>
+                </TotalGrid>
+                <TotalGrid>
+                  <p>Shipping Fee :</p>
+                  <p>$5.34</p>
+                </TotalGrid>
+                <Line></Line>
+                <TotalGrid>
+                  <p>Order Total :</p>
+                  <p>${total / 100 + 5.34}</p>
+                </TotalGrid>
+              </TotalPrice>
+              <CheckoutButton onClick={() => setCheckout(true)}>
+                Check out
+              </CheckoutButton>
+            </div>
+          </Details>
         </Data>
       ) : (
         <Empty>

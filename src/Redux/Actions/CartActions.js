@@ -24,3 +24,10 @@ export const ClearOrder = () => {
     type: 'Clear Order',
   };
 };
+
+export const TotalPrice = (payload) => {
+  return {
+    type: 'Total Price',
+    payload,
+  };
+};

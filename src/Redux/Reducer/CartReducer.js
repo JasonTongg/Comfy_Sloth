@@ -1,5 +1,6 @@
 let initialState = {
   CartProduct: [],
+  TotalPrice: 0,
 };
 
 export default function CartReducer(state = initialState, action) {
@@ -42,6 +43,8 @@ export default function CartReducer(state = initialState, action) {
       return {...state, CartProduct: newCarts};
     case 'Clear Order':
       return {...state, CartProduct: []};
+    case 'Total Price':
+      return {...state, TotalPrice: payload};
     default:
       return state;
   }

@@ -157,9 +157,10 @@ export const TotalPrice = styled.div`
   justify-content: center;
   gap: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  width: 400px;
+  width: 100%;
   align-self: flex-end;
   border-radius: 10px;
+  height: calc(100% - 34.4px - 2rem);
 
   & > *:last-child {
     font-size: 1.4rem;
@@ -190,9 +191,17 @@ export const CheckoutButton = styled.button`
   background-color: var(--primaryColor);
   color: white;
   padding: 0.3rem 0.5rem;
-  width: 400px;
+  width: 100%;
   margin-block: 1rem;
   font-size: 1.3rem;
   cursor: pointer;
   border-radius: 5px;
+`;
+
+export const Details = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-block: 1rem 2rem;
 `;

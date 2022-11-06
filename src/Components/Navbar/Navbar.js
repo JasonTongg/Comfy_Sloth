@@ -7,7 +7,7 @@ import {useNavigate} from 'react-router-dom';
 import '../../Global.css';
 
 export default function Navbar() {
-  let pages = ['Home', 'About', 'Product', 'Checkout'];
+  let pages = ['Home', 'About', 'Product'];
   let navigate = useNavigate();
 
   return (
