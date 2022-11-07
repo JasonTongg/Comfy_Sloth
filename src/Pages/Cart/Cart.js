@@ -55,9 +55,9 @@ export default function Cart() {
           <Table>
             <Grid>
               <p>Item</p>
-              <p>Price</p>
+              <p className="headPrice">Price</p>
               <p>Quantity</p>
-              <p>SubTotal</p>
+              <p className="subtotal">SubTotal</p>
             </Grid>
             <Line></Line>
             {data.map((item, index) => (

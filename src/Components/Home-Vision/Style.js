@@ -17,19 +17,38 @@ export const Content = styled.div`
   width: 100%;
   align-items: center;
   color: var(--black);
+  gap: 1rem;
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 
   h2 {
     font-size: 2.3rem;
     line-height: 2.3rem;
+    text-align: center;
+  }
+
+  p {
+    width: 40%;
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+      text-align: center;
+    }
   }
 `;
 
 export const Items = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.8rem;
   width: 100%;
   transform: translateY(100px);
+
+  @media only screen and (max-width: 350px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Item = styled.div`

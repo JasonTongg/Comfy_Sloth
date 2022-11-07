@@ -14,6 +14,7 @@ export const Container = styled.div`
     font-size: 2.6rem;
     margin: 0;
     color: rgba(0, 0, 0, 0.8);
+    text-align: center;
   }
 
   a {

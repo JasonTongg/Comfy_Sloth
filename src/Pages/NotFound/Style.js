@@ -11,6 +11,8 @@ export const Container = styled.div`
   background-color: var(--white);
   color: var(--primaryColor);
   height: calc(100vh - 88px - 99.31px);
+  text-align: center;
+
   a {
     text-decoration: none;
     color: var(--white);

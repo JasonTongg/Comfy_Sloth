@@ -53,6 +53,11 @@ export const Grid = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   width: 100%;
+
+  @media only screen and (max-width: 750px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  } ;
 `;
 
 export const Inputs = styled.div`
@@ -62,6 +67,11 @@ export const Inputs = styled.div`
   justify-content: flex-start;
   gap: 0.5rem;
 
+  @media only screen and (max-width: 450px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+
   & > * {
     width: 70px;
     text-align: center;
@@ -69,6 +79,10 @@ export const Inputs = styled.div`
     font-size: 1rem;
     outline: none;
     padding: 0.3rem 0.5rem;
+
+    @media only screen and (max-width: 450px) {
+      width: 100%;
+    }
   }
 
   &.card > *:not(:last-child) {

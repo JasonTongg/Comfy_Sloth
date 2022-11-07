@@ -21,6 +21,26 @@ export const Grid = styled.div`
   opcacity: 0.5;
   color: var(--black);
 
+  @media only screen and (max-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media only screen and (max-width: 450px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .headPrice {
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  .subtotal {
+    @media only screen and (max-width: 450px) {
+      display: none;
+    }
+  }
+
   & .item {
     display: flex;
     align-items: center;
@@ -28,16 +48,29 @@ export const Grid = styled.div`
     gap: 1rem;
     justify-self: flex-start;
 
+    @media only screen and (max-width: 750px) {
+      justify-content: center;
+      justify-self: center;
+    }
+
     img {
       width: 100px;
       height: 80px;
       object-fit: cover;
+
+      @media only screen and (max-width: 750px) {
+        display: none;
+      }
     }
 
     & .itemInfo {
       text-transform: capitalize;
       font-size: 1rem;
       color: var(--black);
+
+      @media only screen and (max-width: 750px) {
+        text-align: center;
+      }
 
       p:first-of-type {
         font-weight: bold;
@@ -48,6 +81,10 @@ export const Grid = styled.div`
         align-items: center;
         justify-content: flex-start;
         gap: 0.5rem;
+
+        @media only screen and (max-width: 750px) {
+          justify-content: center;
+        }
 
         span {
           width: 10px;
@@ -61,6 +98,10 @@ export const Grid = styled.div`
 
   & .price {
     color: var(--primaryColor);
+
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
   }
 
   & .order {
@@ -81,6 +122,16 @@ export const Grid = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 50%;
+    gap: 0.5rem;
+
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: 450px) {
+      display: none;
+    }
 
     div {
       background-color: red;
@@ -135,6 +186,7 @@ export const Buttons = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-block: 2rem;
+  gap: 1rem;
 
   & > * {
     border: none;
@@ -168,9 +220,17 @@ export const TotalPrice = styled.div`
   height: calc(100% - 34.4px - 2rem);
   color: var(--black);
 
+  @media only screen and (max-width: 500px) {
+    padding: 1.5rem;
+  }
+
   & > *:last-child {
     font-size: 1.4rem;
     font-weight: bold;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -181,6 +241,12 @@ export const TotalGrid = styled.div`
   align-items: flex-start;
   gap: 2rem;
   font-size: 1.1rem;
+
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    justify-items: center;
+  }
 `;
 
 export const Data = styled.div`
@@ -210,4 +276,14 @@ export const Details = styled.div`
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
   margin-block: 1rem 2rem;
+
+  @media only screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+
+  & > *:first-child {
+    @media only screen and (max-width: 1000px) {
+      order: 10;
+    }
+  }
 `;

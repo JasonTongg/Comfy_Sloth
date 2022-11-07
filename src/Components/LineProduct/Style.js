@@ -17,6 +17,11 @@ export const Item = styled.div`
   gap: 2rem;
   position: relative;
 
+  @media only screen and (max-width: 850px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   img {
     width: 100%;
     height: 200px;
@@ -35,11 +40,19 @@ export const Item = styled.div`
     p:first-of-type {
       color: var(--primaryColor);
       margin-top: 1rem;
+
+      @media only screen and (max-width: 850px) {
+        margin-top: 0.5rem;
+      }
     }
 
     p:last-of-type {
       margin-block: 1rem;
       color: var(--black);
+
+      @media only screen and (max-width: 850px) {
+        margin-block: 0.5rem;
+      }
     }
 
     button {

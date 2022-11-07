@@ -27,6 +27,10 @@ export const Content = styled.div`
     margin: 0;
     line-height: 3rem;
     color: var(--black);
+
+    @media only screen and (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
 
   p {
@@ -34,6 +38,11 @@ export const Content = styled.div`
     line-height: 2.7rem;
     opacity: 0.6;
     color: var(--black);
+
+    @media only screen and (max-width: 400px) {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
   }
 
   a {

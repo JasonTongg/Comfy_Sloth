@@ -30,8 +30,8 @@ export default function Vision() {
         </h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolorum
-          debitis <br /> consectetur reprehenderit non aliquam voluptates dolore
-          aut vero consequuntur.
+          debitis consectetur reprehenderit non aliquam voluptates dolore aut
+          vero consequuntur.
         </p>
       </Content>
       <Items>

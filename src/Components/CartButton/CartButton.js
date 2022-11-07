@@ -2,13 +2,16 @@ import React, {useState} from 'react';
 import {Container, Mode, Big} from './Style';
 import {BsFillCartFill} from 'react-icons/bs';
 import {useNavigate} from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import {BsSun, BsMoon} from 'react-icons/bs';
+import {toggleSidebar} from '../../Redux/Actions/AnimationActions';
 
 export default function CartButton() {
+  let toggle = useSelector((state) => state.animation.sidebar);
   let data = useSelector((state) => state.cart.CartProduct);
   let [mode, setMode] = useState(false);
   let navigate = useNavigate();
+  let dispatch = useDispatch();
 
   let changeColor = () => {
     if (mode) {
@@ -49,7 +52,14 @@ export default function CartButton() {
           </>
         )}
       </Mode>
-      <Container onClick={() => navigate('/cart')}>
+      <Container
+        onClick={() => {
+          navigate('/cart');
+          if (toggle) {
+            dispatch(toggleSidebar());
+          }
+        }}
+      >
         <h3>Cart</h3>
         <BsFillCartFill />
         {data.length > 0 ? <div>{data.length}</div> : null}

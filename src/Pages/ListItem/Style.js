@@ -9,6 +9,11 @@ export const Container = styled.div`
   position: relative;
   align-items: flex-start;
   background-color: var(--white);
+
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px auto;
+  }
 `;
 
 export const Filter = styled.div`
@@ -22,12 +27,30 @@ export const Filter = styled.div`
   justify-content: center;
   gap: 1rem;
 
+  @media only screen and (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 70px 70px 40px 40px;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+  }
+
+  @media only screen and (max-width: 420px) {
+    grid-template-columns: 1fr;
+  }
+
   input {
     width: 100%;
     padding: 0.5rem 0.8rem;
     border: none;
     background-color: var(--darkWhite);
     font-size: 1rem;
+
+    @media only screen and (max-width: 650px) {
+      order: -7;
+    }
   }
 
   button {
@@ -37,6 +60,12 @@ export const Filter = styled.div`
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+
+    @media only screen and (max-width: 650px) {
+      order: 0;
+      grid-column: 1/3;
+      width: 100%;
+    }
   }
 `;
 
@@ -49,6 +78,38 @@ export const Components = styled.div`
   h3 {
     margin-bottom: 0.5rem;
     color: var(--black);
+
+    @media only screen and (max-width: 650px) {
+      text-align: center;
+    }
+  }
+
+  &:nth-of-type(1) {
+    @media only screen and (max-width: 650px) {
+      order: -2;
+      grid-column: 2/3;
+      grid-row: 2/5;
+    }
+  }
+  &:nth-of-type(2) {
+    @media only screen and (max-width: 650px) {
+      order: -3;
+    }
+  }
+  &:nth-of-type(3) {
+    @media only screen and (max-width: 650px) {
+      order: -5;
+    }
+  }
+  &:nth-of-type(4) {
+    @media only screen and (max-width: 650px) {
+      order: -4;
+    }
+  }
+  &:nth-of-type(5) {
+    @media only screen and (max-width: 650px) {
+      order: -6;
+    }
   }
 `;
 
@@ -81,6 +142,15 @@ export const Companies = styled.select`
   border: 2px solid var(--black);
   border-radius: 5px;
 
+  @media only screen and (max-width: 650px) {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   option {
     font-size: 1rem;
     text-transform: capitalize;
@@ -92,6 +162,10 @@ export const Colors = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+
+  @media only screen and (max-width: 650px) {
+    justify-content: center;
+  }
 
   & > * {
     width: 18px;
@@ -129,6 +203,10 @@ export const Shipping = styled.div`
   width: 100%;
   gap: 2rem;
 
+  @media only screen and (max-width: 650px) {
+    justify-content: center;
+  }
+
   input {
     width: 15px;
     height: 15px;
@@ -137,6 +215,15 @@ export const Shipping = styled.div`
 
 export const Price = styled.div`
   width: 80%;
+
+  @media only screen and (max-width: 650px) {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Head = styled.div`
@@ -145,6 +232,18 @@ export const Head = styled.div`
   gap: 1rem;
   align-items: center;
   color: var(--black);
+
+  @media only screen and (max-width: 940px) {
+    grid-template-columns: 80px auto;
+    align-items: left;
+  }
+
+  hr,
+  p {
+    @media only screen and (max-width: 940px) {
+      display: none;
+    }
+  }
 `;
 
 export const Grid = styled.div`
@@ -172,6 +271,10 @@ export const Sort = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
+  @media only screen and (max-width: 940px) {
+    justify-content: flex-start;
+  }
 
   select {
     color: var(--black);

@@ -9,8 +9,16 @@ export const Container = styled.div`
   justify-items: center;
   background-color: var(--white);
 
+  @media only screen and (max-width: 450px) {
+    padding: 1.5rem;
+  }
+
+  @media only screen and (max-width: 350px) {
+    grid-template-columns: 1fr;
+  }
+
   img {
-    width: 541px;
+    width: 100%;
     height: 500px;
     object-fit: cover;
   }
@@ -22,6 +30,10 @@ export const Content = styled.div`
 
   h2 {
     font-size: 2.5rem;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.8rem;
+    }
   }
 
   p {
@@ -29,6 +41,16 @@ export const Content = styled.div`
     line-height: 2rem;
     width: 87%;
     opacity: 0.5;
+    text-align: justify;
+
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      font-size: 0.9rem;
+      line-height: 1.6rem;
+    }
   }
 `;
 

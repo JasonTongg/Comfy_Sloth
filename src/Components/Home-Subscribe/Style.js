@@ -7,6 +7,10 @@ export const Container = styled.div`
   width: 100%;
   background-color: white;
   padding-block: 15rem;
+
+  @media only screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Content = styled.div`
@@ -17,14 +21,27 @@ export const Content = styled.div`
   align-items: flex-start;
   gap: 1rem;
 
+  @media only screen and (max-width: 400px) {
+    text-align: center;
+  }
+
   h2 {
     font-size: 2.1rem;
+
+    @media only screen and (max-width: 400px) {
+      font-size: 1.5rem;
+    }
   }
 
   p {
     line-height: 2rem;
     font-size: 1.1rem;
     color: rgba(0, 0, 0, 0.5);
+
+    @media only screen and (max-width: 400px) {
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
   }
 `;
 
