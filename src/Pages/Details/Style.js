@@ -158,3 +158,33 @@ export const Count = styled.div`
     font-weight: bolder;
   }
 `;
+
+export const LoadingContainer = styled.div`
+  width: 100%;
+  display: flex;
+  padding-block: 4rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  color: var(--primaryColor);
+  height: calc(100vh - 99.31px - 88px);
+  background-color: var(--white);
+
+  svg {
+    font-size: 4rem;
+  }
+
+  a {
+    padding: 0.3rem 0.5rem;
+    border: none;
+    color: var(--white);
+    background-color: var(--primaryColor);
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .large {
+    font-size: 8rem;
+  }
+`;

@@ -12,14 +12,18 @@ import {
   Colors,
   Color,
   Count,
+  LoadingContainer,
 } from './Style';
-import {useParams} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import Header from '../../Components/Header/Header';
 import {BsStarFill, BsStarHalf, BsStar, BsCheck} from 'react-icons/bs';
 import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai';
 import {useNavigate} from 'react-router-dom';
 import {AddCart} from '../../Redux/Actions/CartActions';
 import {useDispatch} from 'react-redux';
+import BarLoader from 'react-spinners/BarLoader';
+import {FaTruckLoading} from 'react-icons/fa';
+import {TbError404} from 'react-icons/tb';
 
 export default function Details() {
   let {id} = useParams();
@@ -29,6 +33,7 @@ export default function Details() {
   let [active, setActive] = useState(0);
   let [color, setColor] = useState();
   let [order, setOrder] = useState(0);
+  let [error, setError] = useState('');
 
   let getData = useCallback(async () => {
     try {
@@ -39,7 +44,7 @@ export default function Details() {
 
       setData(data);
     } catch (error) {
-      console.log(error.message);
+      setError(error.message);
     }
   }, [id]);
 
@@ -177,6 +182,28 @@ export default function Details() {
       </Container>
     );
   } else {
-    return <h1>Loading...</h1>;
+    if (error) {
+      return (
+        <LoadingContainer>
+          <TbError404 className="large"></TbError404>
+          <h2>Product Not Found..</h2>
+          <Link to={'/product'}>Back to Product</Link>
+        </LoadingContainer>
+      );
+    }
+    return (
+      <LoadingContainer>
+        <FaTruckLoading></FaTruckLoading>
+        <h2>Loading Page...</h2>
+        <BarLoader
+          color="var(--primaryColor)"
+          size={30}
+          loading={true}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+          speedMultiplier={1}
+        />
+      </LoadingContainer>
+    );
   }
 }
