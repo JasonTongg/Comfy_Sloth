@@ -34,7 +34,6 @@ export default function CartReducer(state = initialState, action) {
     case 'Update Order':
       let newCart = [...state.CartProduct];
       newCart[payload.index].order = payload.value;
-      console.log('tess');
       return {...state, CartProduct: newCart};
     case 'Delete Order':
       let newCarts = state.CartProduct.filter(

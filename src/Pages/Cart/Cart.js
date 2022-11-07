@@ -77,16 +77,21 @@ export default function Cart() {
                   <div className="order">
                     <AiOutlineMinus
                       onClick={() => {
-                        let newOrder = item.order;
-                        if (newOrder - 1 < 0) {
+                        let newOrder = item.order - 1;
+                        if (newOrder <= 0) {
                           newOrder = 0;
                         } else {
-                          newOrder -= 1;
+                          setTotal((old) => {
+                            return old - +item.price;
+                          });
                         }
-                        setTotal((old) => {
-                          return old - +item.price;
-                        });
-                        dispatch(UpdateOrder({index, value: newOrder}));
+
+                        if (newOrder > 0) {
+                          dispatch(UpdateOrder({index, value: newOrder}));
+                        } else {
+                          console.log('masuk?');
+                          dispatch(DeleteOrder(item.orderId));
+                        }
                       }}
                     ></AiOutlineMinus>
                     <p>{item.order}</p>
@@ -97,10 +102,10 @@ export default function Cart() {
                           newOrder = item.stock;
                         } else {
                           newOrder += 1;
+                          setTotal((old) => {
+                            return old + +item.price;
+                          });
                         }
-                        setTotal((old) => {
-                          return old + +item.price;
-                        });
                         dispatch(UpdateOrder({index, value: newOrder}));
                       }}
                     ></AiOutlinePlus>
@@ -145,7 +150,7 @@ export default function Cart() {
                 <Line></Line>
                 <TotalGrid>
                   <p>Order Total :</p>
-                  <p>${total / 100 + 5.34}</p>
+                  <p>${(total / 100 + 5.34).toFixed(2)}</p>
                 </TotalGrid>
               </TotalPrice>
               <CheckoutButton onClick={() => setCheckout(true)}>
