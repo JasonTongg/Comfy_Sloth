@@ -1,5 +1,5 @@
 # Complete Project Link
-https://comfyy-sloth-store.netlify.app/Product
+https://comfyy-sloth-store.netlify.app
 
 # Getting Started with Create React App
 
