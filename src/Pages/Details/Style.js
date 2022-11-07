@@ -22,6 +22,10 @@ export const Grid = styled.div`
   width: 100%;
   gap: 3.5rem;
   color: var(--black);
+
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Images = styled.div`
@@ -65,9 +69,10 @@ export const Image = styled.div`
   gap: 1rem;
   width: 100%;
   margin-top: 1rem;
+  justify-items: center;
 
   & > * {
-    width: 100px;
+    width: 100%;
     height: 80px;
     object-fit: cover;
     border-radius: 5px;
